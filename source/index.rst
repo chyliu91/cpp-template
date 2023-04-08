@@ -10,7 +10,8 @@ Welcome to cpp-template's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   ./I-基础/index
+   ch01/index
+   ch02/index
 
 
 Indices and tables

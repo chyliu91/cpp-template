@@ -18,6 +18,8 @@
 
 
 # -- Project information -----------------------------------------------------
+import recommonmark
+from recommonmark.transform import AutoStructify
 
 project = 'cpp-template'
 copyright = '2023, y'
@@ -38,7 +40,8 @@ release = 'v1.0'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['recommonmark','sphinx_markdown_tables'
+extensions = ['recommonmark','sphinx_markdown_tables','sphinx.ext.autodoc',
+             'sphinx.ext.napoleon', 'sphinx.ext.mathjax',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -156,3 +159,13 @@ texinfo_documents = [
      author, 'cpp-template', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+def setup(app):
+    app.add_config_value('recommonmark_config', {
+        #'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',
+        'enable_math': False,
+        'enable_inline_math': False,
+        'enable_eval_rst': True,
+    }, True)
+    app.add_transform(AutoStructify)
