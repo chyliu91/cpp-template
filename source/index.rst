@@ -7,12 +7,11 @@ Welcome to cpp-template's documentation!
 ========================================
 
 .. toctree::
-   
    :maxdepth: 2
    :caption: Contents:
 
-   ./基础/1_函数模板
-   ./基础/2_类模板
+   ./基础/1_函数模板/index
+   ./基础/2_类模板/index
 
 Indices and tables
 ==================
