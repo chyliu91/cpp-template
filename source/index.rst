@@ -11,8 +11,7 @@ Welcome to cpp-template's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   ./基础/函数模板
-   ./基础/类模板
+   ./基础/index
 
 
 Indices and tables
